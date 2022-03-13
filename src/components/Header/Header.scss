@@ -1,0 +1,51 @@
+@use "../../assets/scss/variables" as *;
+
+.header {
+  position: relative;
+  min-height: 290px;
+
+  .header__hero--desk {
+    display: block;
+    max-width: 100%;
+  }
+
+  .header__logo {
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    margin: 30px;
+  }
+  .header__logo--mob {
+    right: 0;
+  }
+  .header__logo--desk {
+    left: 0;
+  }
+
+  .header__search-container--mob {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header__search-container--desk {
+    transform: translate(50%, -100%);
+    // transform: translateX(50%) translateY(-100%);
+  }
+
+  .header__search {
+    font-family: $font;
+    font-weight: bold;
+    font-size: $font-size-search;
+
+    background-color: transparent;
+    border: none;
+
+    width: 320px;
+  }
+
+  .header__search,
+  .header__search::placeholder {
+    color: $colour-primary;
+    text-align: left;
+  }
+}

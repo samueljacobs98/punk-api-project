@@ -1,0 +1,42 @@
+@use "../../assets/scss/variables" as *;
+
+.sort-container {
+  background-color: $colour-primary;
+  padding: 12px 25px;
+
+  .sort-container__label {
+    font-weight: bold;
+    font-size: $font-size-aside-heading;
+  }
+
+  .sort-container__select {
+    background-color: $colour-background;
+    border: none;
+    border-radius: $box-border-radius;
+    padding: 0 16px;
+  }
+}
+
+.sort-container--mob {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .sort-container__select {
+    padding: 8px 12px;
+  }
+}
+
+.sort-container--desk {
+  max-width: 340px;
+
+  .sort-container__label {
+    display: block;
+  }
+
+  .sort-container__select {
+    padding: 8px 12px;
+    margin: 10px 20px;
+    margin-bottom: 0;
+  }
+}
