@@ -31,8 +31,7 @@ function App() {
   const getBeers = async (beerName, activeFilters) => {
     let connecter = "";
     if (beerName && activeFilters) connecter = "&";
-    const specifiers = beerName + connecter + activeFilters; // highABV // ClassicRange // Acidic
-    console.log(specifiers);
+    const specifiers = beerName + connecter + activeFilters;
 
     let joiner = "";
     if (specifiers.length) joiner = "?";
@@ -42,7 +41,14 @@ function App() {
       setFilters({ highABV: false, classicRange: false, acidic: false });
     } else {
       const data = await res.json();
-      setBeers(data);
+      let filteredData;
+      filters.acidic
+        ? setBeers(
+            data.filter((beer) => {
+              return beer.ph < 4;
+            })
+          )
+        : setBeers(data);
     }
   };
 
@@ -58,7 +64,6 @@ function App() {
 
   const handleInput = (event) => {
     const cleanInput = event.target.value.toLowerCase();
-    console.log(cleanInput);
     setSearchTerm(cleanInput);
   };
 
@@ -75,15 +80,17 @@ function App() {
     }
   };
 
+  const windowType = windowWidth > 618 ? "desk" : "mob";
+
   return (
     <>
       <Header
-        windowType={windowWidth > 618 ? "desk" : "mob"}
+        windowType={windowType}
         searchTerm={searchTerm}
         handleInput={handleInput}
       />
       <Main
-        windowType={windowWidth > 618 ? "desk" : "mob"}
+        windowType={windowType}
         beers={beers}
         filters={filters}
         handleFilter={handleFilter}

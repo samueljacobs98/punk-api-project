@@ -83,7 +83,7 @@ const Filter = ({ windowType, filters, handleFilter }) => {
           <p className="filter-container__option-text classic">Classic Range</p>
           <img src={add} alt="add filter" className="classic" />
         </div>
-        <div className="filter-container__option ph" onClick={handleFilter}>
+        <div className={phClass} onClick={handleFilter}>
           <p className="filter-container__option-text ph">
             {"Acidic (pH < 4)"}
           </p>
