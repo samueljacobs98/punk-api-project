@@ -10,6 +10,7 @@
   }
 
   .sort-container__select {
+    font-size: 1rem;
     background-color: $colour-background;
     border: none;
     border-radius: $box-border-radius;
@@ -24,6 +25,7 @@
 
   .sort-container__select {
     padding: 8px 12px;
+    margin-left: 8px;
   }
 }
 

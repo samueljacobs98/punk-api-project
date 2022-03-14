@@ -1,0 +1,23 @@
+@use "../../assets/scss/variables" as *;
+
+.cards {
+  width: 100%;
+  // background-color: $colour-primary;
+  margin: 4px;
+  margin-left: 0;
+
+  display: grid;
+  gap: 4px;
+}
+
+@media screen and (max-width: 618px) {
+  .cards {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 618px) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, $card-width);
+  }
+}
