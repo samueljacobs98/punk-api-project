@@ -4,11 +4,15 @@ import Cards from "../Cards/Cards";
 
 import "./Main.scss";
 
-const Main = ({ windowType }) => {
+const Main = ({ windowType, beers, filters, handleFilter }) => {
   return (
     <main className="main">
-      <Aside windowType={windowType} />
-      <Cards />
+      <Aside
+        windowType={windowType}
+        filters={filters}
+        handleFilter={handleFilter}
+      />
+      <Cards beers={beers} />
     </main>
   );
 };

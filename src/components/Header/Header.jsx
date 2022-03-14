@@ -4,7 +4,7 @@ import deskHero from "../../assets/svgs/desktop/hero.svg";
 import mobHero from "../../assets/svgs/mobile/hero.svg";
 import logo from "../../assets/images/logo.png";
 
-const Header = ({ windowType }) => {
+const Header = ({ windowType, searchTerm, handleInput }) => {
   const mobHeader = () => {
     const headerJSX = (
       <>
@@ -24,6 +24,8 @@ const Header = ({ windowType }) => {
             className="header__search"
             type="text"
             placeholder="Search..."
+            value={searchTerm}
+            onInput={handleInput}
           />
         </div>
       </>
@@ -50,6 +52,8 @@ const Header = ({ windowType }) => {
             className="header__search"
             type="text"
             placeholder="Search..."
+            value={searchTerm}
+            onInput={handleInput}
           />
         </div>
       </>

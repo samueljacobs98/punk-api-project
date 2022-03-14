@@ -3,7 +3,7 @@
 .header {
   position: relative;
   min-height: 290px;
-  max-width: 1451px;
+  max-width: $header-max-width;
 
   .header__hero--desk {
     display: block;

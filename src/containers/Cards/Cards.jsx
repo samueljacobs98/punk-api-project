@@ -3,22 +3,12 @@ import Card from "../../components/Card/Card";
 
 import "./Cards.scss";
 
-const Cards = () => {
-  // const cardListJSX = (
+const Cards = ({ beers }) => {
+  const cardListJSX = beers.map((beer) => {
+    return <Card key={beer.id} beer={beer} />;
+  });
 
-  // );
-
-  return (
-    <div className="cards">
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-    </div>
-  );
+  return <div className="cards">{cardListJSX}</div>;
 };
 
 export default Cards;
