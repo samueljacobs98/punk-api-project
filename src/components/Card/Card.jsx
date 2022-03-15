@@ -1,9 +1,11 @@
 import React from "react";
 import "./Card.scss";
 
-const Card = ({ beer }) => {
+const Card = ({ beer, theme }) => {
+  let cardClass = "card";
+  if (theme === "dark") cardClass += " card--dark";
   return (
-    <div className="card">
+    <div className={cardClass}>
       <p className="card__title">{beer.name}</p>
       <div className="card__text">
         <p className="card__tag">{beer.tagline}</p>

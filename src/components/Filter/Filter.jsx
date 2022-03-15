@@ -1,27 +1,36 @@
 import downArrow from "../../assets/svgs/mobile/down-arrow.svg";
+import downArrowLight from "../../assets/svgs/mobile/down-arrow-light.svg";
 import upArrow from "../../assets/svgs/mobile/up-arrow.svg";
+import upArrowLight from "../../assets/svgs/mobile/up-arrow-light.svg";
 import add from "../../assets/svgs/desktop/add.svg";
 import "./Filter.scss";
 import { useState } from "react";
 
-const Filter = ({ windowType, filters, handleFilter }) => {
+const Filter = ({ windowType, filters, handleFilter, theme }) => {
   const [toggle, setToggle] = useState(false);
 
   const toggleFilter = () => {
     setToggle(!toggle);
   };
 
-  const abvClass = filters.highABV
-    ? "filter-container__option filter-container__option--active highABV"
-    : "filter-container__option highABV";
+  const getClass = (filter, isDiv) => {
+    isDiv = isDiv || false;
+    let returnClass = "filter-container__option";
+    if (!isDiv) returnClass += "-text";
+    if (theme === "dark") returnClass = `${returnClass} ${returnClass}--dark`;
+    if (filters[`${filter}`] && theme === "dark") returnClass += "--active";
+    if (filters[`${filter}`] && theme === "light")
+      returnClass += " " + returnClass + "--active";
+    return returnClass;
+  };
 
-  const classicClass = filters.classicRange
-    ? "filter-container__option filter-container__option--active classic"
-    : "filter-container__option classic";
+  const abvClass = getClass("highABV", true) + " highABV";
+  const classicClass = getClass("classicRange", true) + " classic";
+  const phClass = getClass("acidic", true) + " ph";
 
-  const phClass = filters.acidic
-    ? "filter-container__option filter-container__option--active ph"
-    : "filter-container__option ph";
+  const abvTextClass = getClass("highABV", false) + " highABV";
+  const classicTextClass = getClass("classicRange", false) + " classic";
+  const phTextClass = getClass("acidic", false) + " ph";
 
   const mobJSX = () => {
     return (
@@ -33,34 +42,28 @@ const Filter = ({ windowType, filters, handleFilter }) => {
             <img
               className="filter-container__arrow"
               onClick={toggleFilter}
-              src={downArrow}
+              src={theme === "light" ? downArrow : downArrowLight}
             />
           ) : (
             <img
               className="filter-container__arrow"
               onClick={toggleFilter}
-              src={upArrow}
+              src={theme === "light" ? upArrow : upArrowLight}
             />
           )}
         </div>
         {toggle && (
           <>
             <div className={abvClass} onClick={handleFilter}>
-              <p className="filter-container__option-text highABV">
-                {"High ABV (> 6.0%)"}
-              </p>
+              <p className={abvTextClass}>{"High ABV (> 6.0%)"}</p>
               <img src={add} alt="add filter" className="highABV" />
             </div>
             <div className={classicClass} onClick={handleFilter}>
-              <p className="filter-container__option-text classic">
-                Classic Range
-              </p>
+              <p className={classicTextClass}>Classic Range</p>
               <img src={add} alt="add filter" className="classic" />
             </div>
             <div className={phClass} onClick={handleFilter}>
-              <p className="filter-container__option-text ph">
-                {"Acidic (pH < 4)"}
-              </p>
+              <p className={phTextClass}>{"Acidic (pH < 4)"}</p>
               <img src={add} alt="add filter" className="ph" />
             </div>
           </>
@@ -74,19 +77,15 @@ const Filter = ({ windowType, filters, handleFilter }) => {
       <>
         <p className="filter-container__label">Filter</p>
         <div className={abvClass} onClick={handleFilter}>
-          <p className="filter-container__option-text highABV">
-            {"High ABV (> 6.0%)"}
-          </p>
+          <p className={abvTextClass}>{"High ABV (> 6.0%)"}</p>
           <img src={add} alt="add filter" className="highABV" />
         </div>
         <div className={classicClass} onClick={handleFilter}>
-          <p className="filter-container__option-text classic">Classic Range</p>
+          <p className={classicTextClass}>Classic Range</p>
           <img src={add} alt="add filter" className="classic" />
         </div>
         <div className={phClass} onClick={handleFilter}>
-          <p className="filter-container__option-text ph">
-            {"Acidic (pH < 4)"}
-          </p>
+          <p className={phTextClass}>{"Acidic (pH < 4)"}</p>
           <img src={add} alt="add filter" className="ph" />
         </div>
       </>

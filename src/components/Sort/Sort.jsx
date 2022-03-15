@@ -1,15 +1,22 @@
 import "./Sort.scss";
 
-const Sort = ({ windowType }) => {
+const Sort = ({ windowType, handleSort, theme }) => {
+  let containerClass = `sort-container sort-container--${windowType}`;
+  if (theme === "dark") containerClass += " sort-container--dark";
+
+  let selectClass = "sort-container__select";
+  if (theme === "dark") selectClass += " sort-container__select--dark";
+
   return (
-    <div className={`sort-container sort-container--${windowType}`}>
+    <div className={containerClass}>
       <label className={`sort-container__label`} htmlFor="sort-method">
         Sort
       </label>
       <select
-        className={`sort-container__select`}
+        className={selectClass}
         name="sort-method"
         id="sort-method"
+        onChange={handleSort}
       >
         <option value="none">Select...</option>
         <option value="abv-h2l">ABV (highest to lowest)</option>

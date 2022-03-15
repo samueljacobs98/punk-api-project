@@ -18,6 +18,13 @@
   }
 }
 
+.sort-container--dark {
+  background-color: $colour-primary-dark;
+  .sort-container__select--dark {
+    background-color: $colour-font;
+  }
+}
+
 .sort-container--mob {
   display: flex;
   justify-content: space-between;

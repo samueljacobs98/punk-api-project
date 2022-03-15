@@ -1,3 +1,5 @@
+@use "../../assets/scss/variables" as *;
+
 .main {
   display: grid;
   grid-template-columns: 340px 1fr;

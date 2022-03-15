@@ -1,0 +1,15 @@
+@use "../../assets/scss/variables" as *;
+
+.theme-toggle {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  padding: 6px;
+  margin: 6px;
+  border-radius: 50%;
+}
+
+.theme-toggle:hover {
+  cursor: pointer;
+}

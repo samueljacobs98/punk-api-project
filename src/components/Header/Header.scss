@@ -16,6 +16,9 @@
     position: absolute;
     top: 0;
     margin: 30px;
+    &--dark {
+      opacity: 0.8;
+    }
   }
   .header__logo--mob {
     right: 0;
@@ -50,5 +53,10 @@
   .header__search::placeholder {
     color: $colour-primary;
     text-align: left;
+  }
+
+  .header__search--dark,
+  .header__search--dark::placeholder {
+    color: $colour-accent;
   }
 }

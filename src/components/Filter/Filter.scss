@@ -19,6 +19,10 @@
     align-items: center;
     padding: 12px 16px;
     border-radius: $box-border-radius;
+
+    &-text--dark--active {
+      color: $colour-font;
+    }
   }
 }
 
@@ -48,6 +52,13 @@
       background-color: $colour-accent;
     }
   }
+
+  .filter-container__option--dark {
+    background-color: $colour-primary-dark;
+    &--active {
+      background-color: $colour-background;
+    }
+  }
 }
 
 // Larger Screen
@@ -73,6 +84,13 @@
     }
     &:hover {
       cursor: pointer;
+    }
+  }
+
+  .filter-container__option--dark {
+    background-color: $colour-primary-dark;
+    &--active {
+      background-color: $colour-background;
     }
   }
 }
