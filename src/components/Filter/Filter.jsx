@@ -32,69 +32,49 @@ const Filter = ({ windowType, filters, handleFilter, theme }) => {
   const classicTextClass = getClass("classicRange", false) + " classic";
   const phTextClass = getClass("acidic", false) + " ph";
 
-  const mobJSX = () => {
-    return (
-      <>
-        <div className="filter-container__container">
-          <p className="filter-container__label">Filter</p>
+  const filtersSubJSX = (
+    <>
+      <div className={abvClass} onClick={handleFilter}>
+        <p className={abvTextClass}>{"High ABV (> 6.0%)"}</p>
+        <img src={add} alt="add filter" className="highABV" />
+      </div>
+      <div className={classicClass} onClick={handleFilter}>
+        <p className={classicTextClass}>Classic Range</p>
+        <img src={add} alt="add filter" className="classic" />
+      </div>
+      <div className={phClass} onClick={handleFilter}>
+        <p className={phTextClass}>{"Acidic (pH < 4)"}</p>
+        <img src={add} alt="add filter" className="ph" />
+      </div>
+    </>
+  );
 
-          {!toggle ? (
-            <img
-              className="filter-container__arrow"
-              onClick={toggleFilter}
-              src={theme === "light" ? downArrow : downArrowLight}
-            />
-          ) : (
-            <img
-              className="filter-container__arrow"
-              onClick={toggleFilter}
-              src={theme === "light" ? upArrow : upArrowLight}
-            />
-          )}
-        </div>
-        {toggle && (
-          <>
-            <div className={abvClass} onClick={handleFilter}>
-              <p className={abvTextClass}>{"High ABV (> 6.0%)"}</p>
-              <img src={add} alt="add filter" className="highABV" />
-            </div>
-            <div className={classicClass} onClick={handleFilter}>
-              <p className={classicTextClass}>Classic Range</p>
-              <img src={add} alt="add filter" className="classic" />
-            </div>
-            <div className={phClass} onClick={handleFilter}>
-              <p className={phTextClass}>{"Acidic (pH < 4)"}</p>
-              <img src={add} alt="add filter" className="ph" />
-            </div>
-          </>
-        )}
-      </>
-    );
-  };
-
-  const deskJSX = () => {
-    return (
-      <>
+  const filterJSX = (
+    <>
+      <div className="filter-container__container">
         <p className="filter-container__label">Filter</p>
-        <div className={abvClass} onClick={handleFilter}>
-          <p className={abvTextClass}>{"High ABV (> 6.0%)"}</p>
-          <img src={add} alt="add filter" className="highABV" />
-        </div>
-        <div className={classicClass} onClick={handleFilter}>
-          <p className={classicTextClass}>Classic Range</p>
-          <img src={add} alt="add filter" className="classic" />
-        </div>
-        <div className={phClass} onClick={handleFilter}>
-          <p className={phTextClass}>{"Acidic (pH < 4)"}</p>
-          <img src={add} alt="add filter" className="ph" />
-        </div>
-      </>
-    );
-  };
+        {windowType === "mob" && !toggle ? (
+          <img
+            className="filter-container__arrow"
+            onClick={toggleFilter}
+            src={theme === "light" ? downArrow : downArrowLight}
+          />
+        ) : (
+          <img
+            className="filter-container__arrow"
+            onClick={toggleFilter}
+            src={theme === "light" ? upArrow : upArrowLight}
+          />
+        )}
+      </div>
+      {windowType === "mob" && toggle && filtersSubJSX}
+      {windowType === "desk" && filtersSubJSX}
+    </>
+  );
 
   return (
     <div className={`filter-container filter-container--${windowType}`}>
-      {windowType === "desk" ? deskJSX() : mobJSX()}
+      {filterJSX}
     </div>
   );
 };

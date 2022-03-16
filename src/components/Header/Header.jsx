@@ -13,68 +13,44 @@ const Header = ({ windowType, searchTerm, handleInput, theme }) => {
     searchClass += " header__search--dark";
     logoClass += ` ${logoClass}--dark`;
   }
-  const mobHeader = () => {
-    const headerJSX = (
-      <>
-        <img
-          className="header__hero--mob"
-          src={theme === "light" ? mobHero : mobHeroDark}
-          alt="heading background"
-        />
-        <img
-          className={`${logoClass} header__logo--mob`}
-          src={logo}
-          alt="Brewdog logo"
-          width="190px"
-        />
-        <div className="header__search-container header__search-container--mob">
-          <input
-            className={searchClass}
-            type="text"
-            placeholder="Search..."
-            value={searchTerm}
-            onInput={handleInput}
-          />
-        </div>
-      </>
-    );
-    return headerJSX;
+
+  const getHero = () => {
+    if (theme === "light") {
+      if (windowType === "desk") return deskHero;
+      return mobHero;
+    }
+    if (windowType === "desk") return deskHeroDark;
+    return mobHeroDark;
   };
 
-  const deskHeader = () => {
-    const headerJSX = (
-      <>
-        <img
-          className="header__hero--desk"
-          src={theme === "light" ? deskHero : deskHeroDark}
-          alt="heading background"
+  const headerJSX = (
+    <>
+      <img
+        className={`header__hero--${windowType}`}
+        src={getHero()}
+        alt="heading background"
+      />
+      <img
+        className={`${logoClass} header__logo--${windowType}`}
+        src={logo}
+        alt="Brewdog logo"
+        width="190px"
+      />
+      <div
+        className={`header__search-container header__search-container--${windowType}`}
+      >
+        <input
+          className={searchClass}
+          type="text"
+          placeholder="Search..."
+          value={searchTerm}
+          onInput={handleInput}
         />
-        <img
-          className={`${logoClass} header__logo--desk`}
-          src={logo}
-          alt="Brewdog logo"
-          width="190px"
-        />
-        <div className="header__search-container header__search-container--desk">
-          <input
-            className={searchClass}
-            type="text"
-            placeholder="Search..."
-            value={searchTerm}
-            onInput={handleInput}
-          />
-        </div>
-      </>
-    );
-
-    return headerJSX;
-  };
-
-  return (
-    <header className="header">
-      {windowType === "desk" ? deskHeader() : mobHeader()}
-    </header>
+      </div>
+    </>
   );
+
+  return <header className="header">{headerJSX}</header>;
 };
 
 export default Header;

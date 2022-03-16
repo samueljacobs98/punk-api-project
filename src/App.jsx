@@ -23,8 +23,7 @@ function App() {
   const [theme, setTheme] = useState("light");
 
   const toggleTheme = () => {
-    if (theme === "light") setTheme("dark");
-    if (theme === "dark") setTheme("light");
+    theme === "light" ? setTheme("dark") : setTheme("light");
   };
 
   useEffect(() => {
@@ -61,6 +60,21 @@ function App() {
   };
   const url = "https://api.punkapi.com/v2/beers";
 
+  const sortData = (data) => {
+    switch (sortMethod) {
+      case "none":
+        return data;
+      case "abv-h2l":
+        return data.sort((a, b) => b.abv - a.abv);
+      case "abv-l2h":
+        return data.sort((a, b) => a.abv - b.abv);
+      case "acid-h2l":
+        return data.sort((a, b) => b.ph - a.ph);
+      case "acid-l2h":
+        return data.sort((a, b) => a.ph - b.ph);
+    }
+  };
+
   const getBeers = async (beerName, activeFilters) => {
     let connecter = "";
     if (beerName && activeFilters) connecter = "&";
@@ -80,22 +94,8 @@ function App() {
       data = data.filter((beer) => {
         return beer.ph < 4;
       });
-    switch (sortMethod) {
-      case "none":
-        break;
-      case "abv-h2l":
-        data.sort((a, b) => b.abv - a.abv);
-        break;
-      case "abv-l2h":
-        data.sort((a, b) => a.abv - b.abv);
-        break;
-      case "acid-h2l":
-        data.sort((a, b) => b.ph - a.ph);
-        break;
-      case "acid-l2h":
-        data.sort((a, b) => a.ph - b.ph);
-        break;
-    }
+
+    data = sortData(data);
     setBeers(data);
   };
 
