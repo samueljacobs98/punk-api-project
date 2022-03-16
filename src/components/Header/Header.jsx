@@ -39,7 +39,11 @@ const Header = ({ windowType, searchTerm, handleInput, theme }) => {
       <div
         className={`header__search-container header__search-container--${windowType}`}
       >
+        <label for="search" className="search">
+          Search beers
+        </label>
         <input
+          id="search"
           className={searchClass}
           type="text"
           placeholder="Search..."

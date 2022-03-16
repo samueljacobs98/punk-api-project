@@ -38,6 +38,12 @@
     width: 320px;
   }
 
+  .header__search-container {
+    .search {
+      display: none;
+    }
+  }
+
   .header__search-container--mob {
     display: flex;
     justify-content: center;
@@ -51,7 +57,7 @@
 
   .header__search,
   .header__search::placeholder {
-    color: $colour-primary;
+    color: #836853;
     text-align: left;
   }
 

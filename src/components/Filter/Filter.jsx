@@ -60,6 +60,7 @@ const Filter = ({ windowType, filters, handleFilter, theme }) => {
             className="filter-container__arrow"
             onClick={toggleFilter}
             src={arrowSource}
+            alt="toggle filter menu"
           />
         )}
       </div>
