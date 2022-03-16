@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match App component in format snapshot 1`] = `
+<div>
+  <img
+    alt="toggle theme"
+    class="theme-toggle"
+    src="toDarkToggle.svg"
+  />
+  <header
+    class="header"
+  >
+    <img
+      alt="heading background"
+      class="header__hero--desk"
+      src="hero.svg"
+    />
+    <img
+      alt="Brewdog logo"
+      class="header__logo header__logo--desk"
+      src="logo.png"
+      width="190px"
+    />
+    <div
+      class="header__search-container header__search-container--desk"
+    >
+      <label
+        class="search"
+        for="search"
+      >
+        Search beers
+      </label>
+      <input
+        class="header__search"
+        id="search"
+        placeholder="Search..."
+        type="text"
+        value=""
+      />
+    </div>
+  </header>
+  <main
+    class="main"
+  >
+    <aside
+      class="aside aside--desk"
+    >
+      <div
+        class="sort-container sort-container--desk"
+      >
+        <label
+          class="sort-container__label"
+          for="sort-method"
+        >
+          Sort
+        </label>
+        <select
+          class="sort-container__select"
+          id="sort-method"
+          name="sort-method"
+        >
+          <option
+            value="none"
+          >
+            Select...
+          </option>
+          <option
+            value="abv-h2l"
+          >
+            ABV (highest to lowest)
+          </option>
+          <option
+            value="abv-l2h"
+          >
+            ABV (lowest to highest)
+          </option>
+          <option
+            value="acid-h2l"
+          >
+            Acidity (highest to lowest)
+          </option>
+          <option
+            value="acid-l2h"
+          >
+            Acidity (lowest to highest)
+          </option>
+        </select>
+      </div>
+      <div
+        class="filter-container filter-container--desk"
+      >
+        <div
+          class="filter-container__container"
+        >
+          <p
+            class="filter-container__label"
+          >
+            Filter
+          </p>
+        </div>
+        <button
+          class="filter-container__option highABV"
+        >
+          High ABV (&gt; 6.0%)
+          <img
+            alt="add filter"
+            class="highABV"
+            src="add.svg"
+          />
+        </button>
+        <button
+          class="filter-container__option classic"
+        >
+          Classic Range
+          <img
+            alt="add filter"
+            class="classic"
+            src="add.svg"
+          />
+        </button>
+        <button
+          class="filter-container__option ph"
+        >
+          Acidic (pH &lt; 4)
+          <img
+            alt="add filter"
+            class="ph"
+            src="add.svg"
+          />
+        </button>
+      </div>
+    </aside>
+    <div
+      class="cards"
+    />
+  </main>
+</div>
+`;
