@@ -58,8 +58,15 @@ exports[`should match Aside component in dark, desk format snapshot 1`] = `
           Filter
         </p>
       </div>
+      <label
+        class="button-label"
+        for="abvButton"
+      >
+        Filter for high ABV only
+      </label>
       <button
         class="filter-container__option filter-container__option--dark highABV"
+        id="abvButton"
       >
         High ABV (&gt; 6.0%)
         <img
@@ -68,8 +75,15 @@ exports[`should match Aside component in dark, desk format snapshot 1`] = `
           src="add.svg"
         />
       </button>
+      <label
+        class="button-label"
+        for="classicButton"
+      >
+        Filter for the Classic Range only
+      </label>
       <button
         class="filter-container__option filter-container__option--dark classic"
+        id="classicButton"
       >
         Classic Range
         <img
@@ -78,8 +92,15 @@ exports[`should match Aside component in dark, desk format snapshot 1`] = `
           src="add.svg"
         />
       </button>
+      <label
+        class="button-label"
+        for="phButton"
+      >
+        Filter for low ph (acidic) only
+      </label>
       <button
         class="filter-container__option filter-container__option--dark ph"
+        id="phButton"
       >
         Acidic (pH &lt; 4)
         <img
@@ -219,8 +240,15 @@ exports[`should match Aside component in light, desk format snapshot 1`] = `
           Filter
         </p>
       </div>
+      <label
+        class="button-label"
+        for="abvButton"
+      >
+        Filter for high ABV only
+      </label>
       <button
         class="filter-container__option highABV"
+        id="abvButton"
       >
         High ABV (&gt; 6.0%)
         <img
@@ -229,8 +257,15 @@ exports[`should match Aside component in light, desk format snapshot 1`] = `
           src="add.svg"
         />
       </button>
+      <label
+        class="button-label"
+        for="classicButton"
+      >
+        Filter for the Classic Range only
+      </label>
       <button
         class="filter-container__option classic"
+        id="classicButton"
       >
         Classic Range
         <img
@@ -239,8 +274,15 @@ exports[`should match Aside component in light, desk format snapshot 1`] = `
           src="add.svg"
         />
       </button>
+      <label
+        class="button-label"
+        for="phButton"
+      >
+        Filter for low ph (acidic) only
+      </label>
       <button
         class="filter-container__option ph"
+        id="phButton"
       >
         Acidic (pH &lt; 4)
         <img

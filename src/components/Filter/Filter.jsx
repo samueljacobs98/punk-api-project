@@ -28,15 +28,28 @@ const Filter = ({ windowType, filters, handleFilter, theme }) => {
 
   const filtersSubJSX = (
     <>
-      <button className={abvClass} onClick={handleFilter}>
+      <label htmlFor="abvButton" className="button-label">
+        Filter for high ABV only
+      </label>
+      <button id="abvButton" className={abvClass} onClick={handleFilter}>
         {"High ABV (> 6.0%)"}
         <img src={add} alt="add filter" className="highABV" />
       </button>
-      <button className={classicClass} onClick={handleFilter}>
+      <label htmlFor="classicButton" className="button-label">
+        Filter for the Classic Range only
+      </label>
+      <button
+        id="classicButton"
+        className={classicClass}
+        onClick={handleFilter}
+      >
         {"Classic Range"}
         <img src={add} alt="add filter" className="classic" />
       </button>
-      <button className={phClass} onClick={handleFilter}>
+      <label htmlFor="phButton" className="button-label">
+        Filter for low ph (acidic) only
+      </label>
+      <button id="phButton" className={phClass} onClick={handleFilter}>
         {"Acidic (pH < 4)"}
         <img src={add} alt="add filter" className="ph" />
       </button>

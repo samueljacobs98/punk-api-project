@@ -6,12 +6,17 @@ import "./Toggle.scss";
 
 const Toggle = ({ theme, toggleTheme }) => {
   return (
-    <img
-      className="theme-toggle"
-      src={theme === "light" ? toDarkToggle : toLightToggle}
-      alt="toggle theme"
-      onClick={toggleTheme}
-    />
+    <>
+      <label htmlFor="toggle" className="toggle-label">
+        Toggle Theme
+      </label>
+      <button id="toggle" onClick={toggleTheme} className="theme-toggle">
+        <img
+          src={theme === "light" ? toDarkToggle : toLightToggle}
+          alt="toggle theme"
+        />
+      </button>
+    </>
   );
 };
 

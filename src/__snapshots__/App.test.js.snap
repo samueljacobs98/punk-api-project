@@ -2,11 +2,21 @@
 
 exports[`should match App component in format snapshot 1`] = `
 <div>
-  <img
-    alt="toggle theme"
+  <label
+    class="toggle-label"
+    for="toggle"
+  >
+    Toggle Theme
+  </label>
+  <button
     class="theme-toggle"
-    src="toDarkToggle.svg"
-  />
+    id="toggle"
+  >
+    <img
+      alt="toggle theme"
+      src="toDarkToggle.svg"
+    />
+  </button>
   <header
     class="header"
   >
@@ -98,8 +108,15 @@ exports[`should match App component in format snapshot 1`] = `
             Filter
           </p>
         </div>
+        <label
+          class="button-label"
+          for="abvButton"
+        >
+          Filter for high ABV only
+        </label>
         <button
           class="filter-container__option highABV"
+          id="abvButton"
         >
           High ABV (&gt; 6.0%)
           <img
@@ -108,8 +125,15 @@ exports[`should match App component in format snapshot 1`] = `
             src="add.svg"
           />
         </button>
+        <label
+          class="button-label"
+          for="classicButton"
+        >
+          Filter for the Classic Range only
+        </label>
         <button
           class="filter-container__option classic"
+          id="classicButton"
         >
           Classic Range
           <img
@@ -118,8 +142,15 @@ exports[`should match App component in format snapshot 1`] = `
             src="add.svg"
           />
         </button>
+        <label
+          class="button-label"
+          for="phButton"
+        >
+          Filter for low ph (acidic) only
+        </label>
         <button
           class="filter-container__option ph"
+          id="phButton"
         >
           Acidic (pH &lt; 4)
           <img

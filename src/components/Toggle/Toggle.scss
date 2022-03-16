@@ -8,8 +8,14 @@
   padding: 6px;
   margin: 6px;
   border-radius: 50%;
+  background-color: transparent;
+  border: none;
 }
 
 .theme-toggle:hover {
   cursor: pointer;
+}
+
+.toggle-label {
+  display: none;
 }

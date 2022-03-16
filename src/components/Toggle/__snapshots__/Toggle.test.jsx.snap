@@ -2,20 +2,40 @@
 
 exports[`should match Toggle component in dark format snapshot 1`] = `
 <div>
-  <img
-    alt="toggle theme"
+  <label
+    class="toggle-label"
+    for="toggle"
+  >
+    Toggle Theme
+  </label>
+  <button
     class="theme-toggle"
-    src="toLightToggle.svg"
-  />
+    id="toggle"
+  >
+    <img
+      alt="toggle theme"
+      src="toLightToggle.svg"
+    />
+  </button>
 </div>
 `;
 
 exports[`should match Toggle component in light format snapshot 1`] = `
 <div>
-  <img
-    alt="toggle theme"
+  <label
+    class="toggle-label"
+    for="toggle"
+  >
+    Toggle Theme
+  </label>
+  <button
     class="theme-toggle"
-    src="toDarkToggle.svg"
-  />
+    id="toggle"
+  >
+    <img
+      alt="toggle theme"
+      src="toDarkToggle.svg"
+    />
+  </button>
 </div>
 `;
