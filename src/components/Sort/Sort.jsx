@@ -5,7 +5,7 @@ const Sort = ({ windowType, handleSort, theme }) => {
   if (theme === "dark") containerClass += " sort-container--dark";
 
   let selectClass = "sort-container__select";
-  if (theme === "dark") selectClass += " sort-container__select--dark";
+  if (theme === "dark") selectClass += ` ${selectClass}--dark`;
 
   return (
     <div className={containerClass}>

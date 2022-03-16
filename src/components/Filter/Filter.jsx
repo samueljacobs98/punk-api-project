@@ -13,13 +13,11 @@ const Filter = ({ windowType, filters, handleFilter, theme }) => {
     setToggle(!toggle);
   };
 
-  const getClass = (filter, isDiv) => {
-    isDiv = isDiv || false;
+  const getClass = (filter) => {
     let returnClass = "filter-container__option";
-    if (!isDiv) returnClass += "-text";
     if (theme === "dark") returnClass = `${returnClass} ${returnClass}--dark`;
-    if (filters[`${filter}`] && theme === "dark") returnClass += "--active";
-    if (filters[`${filter}`] && theme === "light")
+    if (filters[filter] && theme === "dark") returnClass += "--active";
+    if (filters[filter] && theme === "light")
       returnClass += " " + returnClass + "--active";
     return returnClass;
   };
@@ -28,42 +26,40 @@ const Filter = ({ windowType, filters, handleFilter, theme }) => {
   const classicClass = getClass("classicRange", true) + " classic";
   const phClass = getClass("acidic", true) + " ph";
 
-  const abvTextClass = getClass("highABV", false) + " highABV";
-  const classicTextClass = getClass("classicRange", false) + " classic";
-  const phTextClass = getClass("acidic", false) + " ph";
-
   const filtersSubJSX = (
     <>
-      <div className={abvClass} onClick={handleFilter}>
-        <p className={abvTextClass}>{"High ABV (> 6.0%)"}</p>
+      <button className={abvClass} onClick={handleFilter}>
+        {"High ABV (> 6.0%)"}
         <img src={add} alt="add filter" className="highABV" />
-      </div>
-      <div className={classicClass} onClick={handleFilter}>
-        <p className={classicTextClass}>Classic Range</p>
+      </button>
+      <button className={classicClass} onClick={handleFilter}>
+        {"Classic Range"}
         <img src={add} alt="add filter" className="classic" />
-      </div>
-      <div className={phClass} onClick={handleFilter}>
-        <p className={phTextClass}>{"Acidic (pH < 4)"}</p>
+      </button>
+      <button className={phClass} onClick={handleFilter}>
+        {"Acidic (pH < 4)"}
         <img src={add} alt="add filter" className="ph" />
-      </div>
+      </button>
     </>
   );
+
+  const arrowSource = !toggle
+    ? theme === "light"
+      ? downArrow
+      : downArrowLight
+    : theme === "light"
+    ? upArrow
+    : upArrowLight;
 
   const filterJSX = (
     <>
       <div className="filter-container__container">
         <p className="filter-container__label">Filter</p>
-        {windowType === "mob" && !toggle ? (
+        {windowType === "mob" && (
           <img
             className="filter-container__arrow"
             onClick={toggleFilter}
-            src={theme === "light" ? downArrow : downArrowLight}
-          />
-        ) : (
-          <img
-            className="filter-container__arrow"
-            onClick={toggleFilter}
-            src={theme === "light" ? upArrow : upArrowLight}
+            src={arrowSource}
           />
         )}
       </div>

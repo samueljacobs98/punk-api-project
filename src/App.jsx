@@ -5,6 +5,13 @@ import Header from "./components/Header/Header";
 import Main from "./containers/Main/Main";
 import Toggle from "./components/Toggle/Toggle";
 
+import {
+  sortData,
+  updateColors,
+  getExtensions,
+  getActiveFilters,
+} from "./utils/beerUtils.js";
+
 function App() {
   // Window State
 
@@ -27,14 +34,7 @@ function App() {
   };
 
   useEffect(() => {
-    document.body.style.setProperty(
-      "background-color",
-      `var(--${theme}-color)`
-    );
-    const root = document.querySelector(":root");
-    theme === "light"
-      ? root.style.setProperty("--font-color", "#28394a")
-      : root.style.setProperty("--font-color", "#f2f1ed");
+    updateColors(theme);
   }, [theme]);
 
   // Beers State
@@ -60,52 +60,27 @@ function App() {
   };
   const url = "https://api.punkapi.com/v2/beers";
 
-  const sortData = (data) => {
-    switch (sortMethod) {
-      case "none":
-        return data;
-      case "abv-h2l":
-        return data.sort((a, b) => b.abv - a.abv);
-      case "abv-l2h":
-        return data.sort((a, b) => a.abv - b.abv);
-      case "acid-h2l":
-        return data.sort((a, b) => b.ph - a.ph);
-      case "acid-l2h":
-        return data.sort((a, b) => a.ph - b.ph);
-    }
-  };
-
   const getBeers = async (beerName, activeFilters) => {
-    let connecter = "";
-    if (beerName && activeFilters) connecter = "&";
+    const extension = getExtensions(beerName, activeFilters);
+    const res = await fetch(url + extension);
 
-    const specifiers = beerName + connecter + activeFilters;
-
-    let joiner = "";
-    if (specifiers.length) joiner = "?";
-
-    const res = await fetch(url + joiner + specifiers);
     if (!res.ok) {
       resetMethod();
       return;
     }
+
     let data = await res.json();
     if (filters.acidic)
       data = data.filter((beer) => {
         return beer.ph < 4;
       });
 
-    data = sortData(data);
+    data = sortData(data, sortMethod);
     setBeers(data);
   };
 
   useEffect(() => {
-    const beerName = searchTerm ? `beer_name=${searchTerm}` : "";
-    let activeFilters = "";
-    if (filters.highABV) activeFilters += "abv_gt=6";
-    if (filters.highABV && filters.classicRange)
-      activeFilters += "&brewed_before=012010";
-    if (filters.classicRange) activeFilters += "brewed_before=012010";
+    const [beerName, activeFilters] = getActiveFilters(searchTerm, filters);
     getBeers(beerName, activeFilters);
   }, [searchTerm, filters, sortMethod]);
 
