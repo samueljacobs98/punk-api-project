@@ -1,0 +1,1183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match Main component in dark, desk format snapshot 1`] = `
+<div>
+  <main
+    class="main"
+  >
+    <aside
+      class="aside aside--desk"
+    >
+      <div
+        class="sort-container sort-container--desk sort-container--dark"
+      >
+        <label
+          class="sort-container__label"
+          for="sort-method"
+        >
+          Sort
+        </label>
+        <select
+          class="sort-container__select sort-container__select--dark"
+          id="sort-method"
+          name="sort-method"
+        >
+          <option
+            value="none"
+          >
+            Select...
+          </option>
+          <option
+            value="abv-h2l"
+          >
+            ABV (highest to lowest)
+          </option>
+          <option
+            value="abv-l2h"
+          >
+            ABV (lowest to highest)
+          </option>
+          <option
+            value="acid-h2l"
+          >
+            Acidity (highest to lowest)
+          </option>
+          <option
+            value="acid-l2h"
+          >
+            Acidity (lowest to highest)
+          </option>
+        </select>
+      </div>
+      <div
+        class="filter-container filter-container--desk"
+      >
+        <div
+          class="filter-container__container"
+        >
+          <p
+            class="filter-container__label"
+          >
+            Filter
+          </p>
+        </div>
+        <button
+          class="filter-container__option filter-container__option--dark highABV"
+        >
+          High ABV (&gt; 6.0%)
+          <img
+            alt="add filter"
+            class="highABV"
+            src="add.svg"
+          />
+        </button>
+        <button
+          class="filter-container__option filter-container__option--dark classic"
+        >
+          Classic Range
+          <img
+            alt="add filter"
+            class="classic"
+            src="add.svg"
+          />
+        </button>
+        <button
+          class="filter-container__option filter-container__option--dark ph"
+        >
+          Acidic (pH &lt; 4)
+          <img
+            alt="add filter"
+            class="ph"
+            src="add.svg"
+          />
+        </button>
+      </div>
+    </aside>
+    <div
+      class="cards"
+    >
+      <div
+        class="card card--dark"
+      >
+        <p
+          class="card__title"
+        >
+          The End Of History
+        </p>
+        <div
+          class="card__text"
+        >
+          <p
+            class="card__tag"
+          >
+            The World's Strongest Beer.
+          </p>
+          <p
+            class="card__desc"
+          >
+            The End of History: The name derives from the famous work of philosopher Francis Fukuyama, this is to beer what democracy is to history. Complexity defined. Floral, grapefruit, caramel and cloves are intensified by boozy heat.
+          </p>
+        </div>
+        <div
+          class="card__details"
+        >
+          <div
+            class="card__ph"
+          >
+            <p
+              class="card__details-title"
+            >
+              pH
+            </p>
+            <p
+              class="card__details-val"
+            >
+              4.4
+            </p>
+          </div>
+          <div
+            class="card__release"
+          >
+            <p
+              class="card__details-title"
+            >
+              Released
+            </p>
+            <p
+              class="card__details-val"
+            >
+              06/2011
+            </p>
+          </div>
+          <div
+            class="card__acl"
+          >
+            <p
+              class="card__details-title"
+            >
+              ABV (%)
+            </p>
+            <p
+              class="card__details-val"
+            >
+              55
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card card--dark"
+      >
+        <p
+          class="card__title"
+        >
+          Buzz
+        </p>
+        <div
+          class="card__text"
+        >
+          <p
+            class="card__tag"
+          >
+            A Real Bitter Experience.
+          </p>
+          <p
+            class="card__desc"
+          >
+            A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.
+          </p>
+        </div>
+        <div
+          class="card__details"
+        >
+          <div
+            class="card__ph"
+          >
+            <p
+              class="card__details-title"
+            >
+              pH
+            </p>
+            <p
+              class="card__details-val"
+            >
+              4.4
+            </p>
+          </div>
+          <div
+            class="card__release"
+          >
+            <p
+              class="card__details-title"
+            >
+              Released
+            </p>
+            <p
+              class="card__details-val"
+            >
+              09/2007
+            </p>
+          </div>
+          <div
+            class="card__acl"
+          >
+            <p
+              class="card__details-title"
+            >
+              ABV (%)
+            </p>
+            <p
+              class="card__details-val"
+            >
+              4.5
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card card--dark"
+      >
+        <p
+          class="card__title"
+        >
+          Avery Brown Dredge
+        </p>
+        <div
+          class="card__text"
+        >
+          <p
+            class="card__tag"
+          >
+            Bloggers' Imperial Pilsner.
+          </p>
+          <p
+            class="card__desc"
+          >
+            An Imperial Pilsner in collaboration with beer writers. Tradition. Homage. Revolution. We wanted to showcase the awesome backbone of the Czech brewing tradition, the noble Saaz hop, and also tip our hats to the modern beers that rock our world, and the people who make them.
+          </p>
+        </div>
+        <div
+          class="card__details"
+        >
+          <div
+            class="card__ph"
+          >
+            <p
+              class="card__details-title"
+            >
+              pH
+            </p>
+            <p
+              class="card__details-val"
+            >
+              4.4
+            </p>
+          </div>
+          <div
+            class="card__release"
+          >
+            <p
+              class="card__details-title"
+            >
+              Released
+            </p>
+            <p
+              class="card__details-val"
+            >
+              02/2011
+            </p>
+          </div>
+          <div
+            class="card__acl"
+          >
+            <p
+              class="card__details-title"
+            >
+              ABV (%)
+            </p>
+            <p
+              class="card__details-val"
+            >
+              7.2
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+`;
+
+exports[`should match Main component in dark, mob format snapshot 1`] = `
+<div>
+  <main
+    class="main"
+  >
+    <aside
+      class="aside aside--mob"
+    >
+      <div
+        class="sort-container sort-container--mob sort-container--dark"
+      >
+        <label
+          class="sort-container__label"
+          for="sort-method"
+        >
+          Sort
+        </label>
+        <select
+          class="sort-container__select sort-container__select--dark"
+          id="sort-method"
+          name="sort-method"
+        >
+          <option
+            value="none"
+          >
+            Select...
+          </option>
+          <option
+            value="abv-h2l"
+          >
+            ABV (highest to lowest)
+          </option>
+          <option
+            value="abv-l2h"
+          >
+            ABV (lowest to highest)
+          </option>
+          <option
+            value="acid-h2l"
+          >
+            Acidity (highest to lowest)
+          </option>
+          <option
+            value="acid-l2h"
+          >
+            Acidity (lowest to highest)
+          </option>
+        </select>
+      </div>
+      <div
+        class="filter-container filter-container--mob"
+      >
+        <div
+          class="filter-container__container"
+        >
+          <p
+            class="filter-container__label"
+          >
+            Filter
+          </p>
+          <img
+            alt="toggle filter menu"
+            class="filter-container__arrow"
+            src="down-arrow-light.svg"
+          />
+        </div>
+      </div>
+    </aside>
+    <div
+      class="cards"
+    >
+      <div
+        class="card card--dark"
+      >
+        <p
+          class="card__title"
+        >
+          The End Of History
+        </p>
+        <div
+          class="card__text"
+        >
+          <p
+            class="card__tag"
+          >
+            The World's Strongest Beer.
+          </p>
+          <p
+            class="card__desc"
+          >
+            The End of History: The name derives from the famous work of philosopher Francis Fukuyama, this is to beer what democracy is to history. Complexity defined. Floral, grapefruit, caramel and cloves are intensified by boozy heat.
+          </p>
+        </div>
+        <div
+          class="card__details"
+        >
+          <div
+            class="card__ph"
+          >
+            <p
+              class="card__details-title"
+            >
+              pH
+            </p>
+            <p
+              class="card__details-val"
+            >
+              4.4
+            </p>
+          </div>
+          <div
+            class="card__release"
+          >
+            <p
+              class="card__details-title"
+            >
+              Released
+            </p>
+            <p
+              class="card__details-val"
+            >
+              06/2011
+            </p>
+          </div>
+          <div
+            class="card__acl"
+          >
+            <p
+              class="card__details-title"
+            >
+              ABV (%)
+            </p>
+            <p
+              class="card__details-val"
+            >
+              55
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card card--dark"
+      >
+        <p
+          class="card__title"
+        >
+          Buzz
+        </p>
+        <div
+          class="card__text"
+        >
+          <p
+            class="card__tag"
+          >
+            A Real Bitter Experience.
+          </p>
+          <p
+            class="card__desc"
+          >
+            A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.
+          </p>
+        </div>
+        <div
+          class="card__details"
+        >
+          <div
+            class="card__ph"
+          >
+            <p
+              class="card__details-title"
+            >
+              pH
+            </p>
+            <p
+              class="card__details-val"
+            >
+              4.4
+            </p>
+          </div>
+          <div
+            class="card__release"
+          >
+            <p
+              class="card__details-title"
+            >
+              Released
+            </p>
+            <p
+              class="card__details-val"
+            >
+              09/2007
+            </p>
+          </div>
+          <div
+            class="card__acl"
+          >
+            <p
+              class="card__details-title"
+            >
+              ABV (%)
+            </p>
+            <p
+              class="card__details-val"
+            >
+              4.5
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card card--dark"
+      >
+        <p
+          class="card__title"
+        >
+          Avery Brown Dredge
+        </p>
+        <div
+          class="card__text"
+        >
+          <p
+            class="card__tag"
+          >
+            Bloggers' Imperial Pilsner.
+          </p>
+          <p
+            class="card__desc"
+          >
+            An Imperial Pilsner in collaboration with beer writers. Tradition. Homage. Revolution. We wanted to showcase the awesome backbone of the Czech brewing tradition, the noble Saaz hop, and also tip our hats to the modern beers that rock our world, and the people who make them.
+          </p>
+        </div>
+        <div
+          class="card__details"
+        >
+          <div
+            class="card__ph"
+          >
+            <p
+              class="card__details-title"
+            >
+              pH
+            </p>
+            <p
+              class="card__details-val"
+            >
+              4.4
+            </p>
+          </div>
+          <div
+            class="card__release"
+          >
+            <p
+              class="card__details-title"
+            >
+              Released
+            </p>
+            <p
+              class="card__details-val"
+            >
+              02/2011
+            </p>
+          </div>
+          <div
+            class="card__acl"
+          >
+            <p
+              class="card__details-title"
+            >
+              ABV (%)
+            </p>
+            <p
+              class="card__details-val"
+            >
+              7.2
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+`;
+
+exports[`should match Main component in light, desk format snapshot 1`] = `
+<div>
+  <main
+    class="main"
+  >
+    <aside
+      class="aside aside--desk"
+    >
+      <div
+        class="sort-container sort-container--desk"
+      >
+        <label
+          class="sort-container__label"
+          for="sort-method"
+        >
+          Sort
+        </label>
+        <select
+          class="sort-container__select"
+          id="sort-method"
+          name="sort-method"
+        >
+          <option
+            value="none"
+          >
+            Select...
+          </option>
+          <option
+            value="abv-h2l"
+          >
+            ABV (highest to lowest)
+          </option>
+          <option
+            value="abv-l2h"
+          >
+            ABV (lowest to highest)
+          </option>
+          <option
+            value="acid-h2l"
+          >
+            Acidity (highest to lowest)
+          </option>
+          <option
+            value="acid-l2h"
+          >
+            Acidity (lowest to highest)
+          </option>
+        </select>
+      </div>
+      <div
+        class="filter-container filter-container--desk"
+      >
+        <div
+          class="filter-container__container"
+        >
+          <p
+            class="filter-container__label"
+          >
+            Filter
+          </p>
+        </div>
+        <button
+          class="filter-container__option highABV"
+        >
+          High ABV (&gt; 6.0%)
+          <img
+            alt="add filter"
+            class="highABV"
+            src="add.svg"
+          />
+        </button>
+        <button
+          class="filter-container__option classic"
+        >
+          Classic Range
+          <img
+            alt="add filter"
+            class="classic"
+            src="add.svg"
+          />
+        </button>
+        <button
+          class="filter-container__option ph"
+        >
+          Acidic (pH &lt; 4)
+          <img
+            alt="add filter"
+            class="ph"
+            src="add.svg"
+          />
+        </button>
+      </div>
+    </aside>
+    <div
+      class="cards"
+    >
+      <div
+        class="card"
+      >
+        <p
+          class="card__title"
+        >
+          The End Of History
+        </p>
+        <div
+          class="card__text"
+        >
+          <p
+            class="card__tag"
+          >
+            The World's Strongest Beer.
+          </p>
+          <p
+            class="card__desc"
+          >
+            The End of History: The name derives from the famous work of philosopher Francis Fukuyama, this is to beer what democracy is to history. Complexity defined. Floral, grapefruit, caramel and cloves are intensified by boozy heat.
+          </p>
+        </div>
+        <div
+          class="card__details"
+        >
+          <div
+            class="card__ph"
+          >
+            <p
+              class="card__details-title"
+            >
+              pH
+            </p>
+            <p
+              class="card__details-val"
+            >
+              4.4
+            </p>
+          </div>
+          <div
+            class="card__release"
+          >
+            <p
+              class="card__details-title"
+            >
+              Released
+            </p>
+            <p
+              class="card__details-val"
+            >
+              06/2011
+            </p>
+          </div>
+          <div
+            class="card__acl"
+          >
+            <p
+              class="card__details-title"
+            >
+              ABV (%)
+            </p>
+            <p
+              class="card__details-val"
+            >
+              55
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card"
+      >
+        <p
+          class="card__title"
+        >
+          Buzz
+        </p>
+        <div
+          class="card__text"
+        >
+          <p
+            class="card__tag"
+          >
+            A Real Bitter Experience.
+          </p>
+          <p
+            class="card__desc"
+          >
+            A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.
+          </p>
+        </div>
+        <div
+          class="card__details"
+        >
+          <div
+            class="card__ph"
+          >
+            <p
+              class="card__details-title"
+            >
+              pH
+            </p>
+            <p
+              class="card__details-val"
+            >
+              4.4
+            </p>
+          </div>
+          <div
+            class="card__release"
+          >
+            <p
+              class="card__details-title"
+            >
+              Released
+            </p>
+            <p
+              class="card__details-val"
+            >
+              09/2007
+            </p>
+          </div>
+          <div
+            class="card__acl"
+          >
+            <p
+              class="card__details-title"
+            >
+              ABV (%)
+            </p>
+            <p
+              class="card__details-val"
+            >
+              4.5
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card"
+      >
+        <p
+          class="card__title"
+        >
+          Avery Brown Dredge
+        </p>
+        <div
+          class="card__text"
+        >
+          <p
+            class="card__tag"
+          >
+            Bloggers' Imperial Pilsner.
+          </p>
+          <p
+            class="card__desc"
+          >
+            An Imperial Pilsner in collaboration with beer writers. Tradition. Homage. Revolution. We wanted to showcase the awesome backbone of the Czech brewing tradition, the noble Saaz hop, and also tip our hats to the modern beers that rock our world, and the people who make them.
+          </p>
+        </div>
+        <div
+          class="card__details"
+        >
+          <div
+            class="card__ph"
+          >
+            <p
+              class="card__details-title"
+            >
+              pH
+            </p>
+            <p
+              class="card__details-val"
+            >
+              4.4
+            </p>
+          </div>
+          <div
+            class="card__release"
+          >
+            <p
+              class="card__details-title"
+            >
+              Released
+            </p>
+            <p
+              class="card__details-val"
+            >
+              02/2011
+            </p>
+          </div>
+          <div
+            class="card__acl"
+          >
+            <p
+              class="card__details-title"
+            >
+              ABV (%)
+            </p>
+            <p
+              class="card__details-val"
+            >
+              7.2
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+`;
+
+exports[`should match Main component in light, mob format snapshot 1`] = `
+<div>
+  <main
+    class="main"
+  >
+    <aside
+      class="aside aside--mob"
+    >
+      <div
+        class="sort-container sort-container--mob"
+      >
+        <label
+          class="sort-container__label"
+          for="sort-method"
+        >
+          Sort
+        </label>
+        <select
+          class="sort-container__select"
+          id="sort-method"
+          name="sort-method"
+        >
+          <option
+            value="none"
+          >
+            Select...
+          </option>
+          <option
+            value="abv-h2l"
+          >
+            ABV (highest to lowest)
+          </option>
+          <option
+            value="abv-l2h"
+          >
+            ABV (lowest to highest)
+          </option>
+          <option
+            value="acid-h2l"
+          >
+            Acidity (highest to lowest)
+          </option>
+          <option
+            value="acid-l2h"
+          >
+            Acidity (lowest to highest)
+          </option>
+        </select>
+      </div>
+      <div
+        class="filter-container filter-container--mob"
+      >
+        <div
+          class="filter-container__container"
+        >
+          <p
+            class="filter-container__label"
+          >
+            Filter
+          </p>
+          <img
+            alt="toggle filter menu"
+            class="filter-container__arrow"
+            src="down-arrow.svg"
+          />
+        </div>
+      </div>
+    </aside>
+    <div
+      class="cards"
+    >
+      <div
+        class="card"
+      >
+        <p
+          class="card__title"
+        >
+          The End Of History
+        </p>
+        <div
+          class="card__text"
+        >
+          <p
+            class="card__tag"
+          >
+            The World's Strongest Beer.
+          </p>
+          <p
+            class="card__desc"
+          >
+            The End of History: The name derives from the famous work of philosopher Francis Fukuyama, this is to beer what democracy is to history. Complexity defined. Floral, grapefruit, caramel and cloves are intensified by boozy heat.
+          </p>
+        </div>
+        <div
+          class="card__details"
+        >
+          <div
+            class="card__ph"
+          >
+            <p
+              class="card__details-title"
+            >
+              pH
+            </p>
+            <p
+              class="card__details-val"
+            >
+              4.4
+            </p>
+          </div>
+          <div
+            class="card__release"
+          >
+            <p
+              class="card__details-title"
+            >
+              Released
+            </p>
+            <p
+              class="card__details-val"
+            >
+              06/2011
+            </p>
+          </div>
+          <div
+            class="card__acl"
+          >
+            <p
+              class="card__details-title"
+            >
+              ABV (%)
+            </p>
+            <p
+              class="card__details-val"
+            >
+              55
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card"
+      >
+        <p
+          class="card__title"
+        >
+          Buzz
+        </p>
+        <div
+          class="card__text"
+        >
+          <p
+            class="card__tag"
+          >
+            A Real Bitter Experience.
+          </p>
+          <p
+            class="card__desc"
+          >
+            A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.
+          </p>
+        </div>
+        <div
+          class="card__details"
+        >
+          <div
+            class="card__ph"
+          >
+            <p
+              class="card__details-title"
+            >
+              pH
+            </p>
+            <p
+              class="card__details-val"
+            >
+              4.4
+            </p>
+          </div>
+          <div
+            class="card__release"
+          >
+            <p
+              class="card__details-title"
+            >
+              Released
+            </p>
+            <p
+              class="card__details-val"
+            >
+              09/2007
+            </p>
+          </div>
+          <div
+            class="card__acl"
+          >
+            <p
+              class="card__details-title"
+            >
+              ABV (%)
+            </p>
+            <p
+              class="card__details-val"
+            >
+              4.5
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card"
+      >
+        <p
+          class="card__title"
+        >
+          Avery Brown Dredge
+        </p>
+        <div
+          class="card__text"
+        >
+          <p
+            class="card__tag"
+          >
+            Bloggers' Imperial Pilsner.
+          </p>
+          <p
+            class="card__desc"
+          >
+            An Imperial Pilsner in collaboration with beer writers. Tradition. Homage. Revolution. We wanted to showcase the awesome backbone of the Czech brewing tradition, the noble Saaz hop, and also tip our hats to the modern beers that rock our world, and the people who make them.
+          </p>
+        </div>
+        <div
+          class="card__details"
+        >
+          <div
+            class="card__ph"
+          >
+            <p
+              class="card__details-title"
+            >
+              pH
+            </p>
+            <p
+              class="card__details-val"
+            >
+              4.4
+            </p>
+          </div>
+          <div
+            class="card__release"
+          >
+            <p
+              class="card__details-title"
+            >
+              Released
+            </p>
+            <p
+              class="card__details-val"
+            >
+              02/2011
+            </p>
+          </div>
+          <div
+            class="card__acl"
+          >
+            <p
+              class="card__details-title"
+            >
+              ABV (%)
+            </p>
+            <p
+              class="card__details-val"
+            >
+              7.2
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+`;

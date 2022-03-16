@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match Toggle component in dark format snapshot 1`] = `
+<div>
+  <img
+    alt="toggle theme"
+    class="theme-toggle"
+    src="toLightToggle.svg"
+  />
+</div>
+`;
+
+exports[`should match Toggle component in light format snapshot 1`] = `
+<div>
+  <img
+    alt="toggle theme"
+    class="theme-toggle"
+    src="toDarkToggle.svg"
+  />
+</div>
+`;

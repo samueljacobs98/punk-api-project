@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match Card component snapshot 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <p
+      class="card__title"
+    >
+      The End Of History
+    </p>
+    <div
+      class="card__text"
+    >
+      <p
+        class="card__tag"
+      >
+        The World's Strongest Beer.
+      </p>
+      <p
+        class="card__desc"
+      >
+        The End of History: The name derives from the famous work of philosopher Francis Fukuyama, this is to beer what democracy is to history. Complexity defined. Floral, grapefruit, caramel and cloves are intensified by boozy heat.
+      </p>
+    </div>
+    <div
+      class="card__details"
+    >
+      <div
+        class="card__ph"
+      >
+        <p
+          class="card__details-title"
+        >
+          pH
+        </p>
+        <p
+          class="card__details-val"
+        >
+          4.4
+        </p>
+      </div>
+      <div
+        class="card__release"
+      >
+        <p
+          class="card__details-title"
+        >
+          Released
+        </p>
+        <p
+          class="card__details-val"
+        >
+          06/2011
+        </p>
+      </div>
+      <div
+        class="card__acl"
+      >
+        <p
+          class="card__details-title"
+        >
+          ABV (%)
+        </p>
+        <p
+          class="card__details-val"
+        >
+          55
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

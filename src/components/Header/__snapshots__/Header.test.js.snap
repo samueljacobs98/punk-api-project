@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match Header component in desktop format snapshot 1`] = `
+<div>
+  <header
+    class="header"
+  >
+    <img
+      alt="heading background"
+      class="header__hero--desk"
+      src="hero.svg"
+    />
+    <img
+      alt="Brewdog logo"
+      class="header__logo header__logo--desk"
+      src="logo.png"
+      width="190px"
+    />
+    <div
+      class="header__search-container header__search-container--desk"
+    >
+      <label
+        class="search"
+        for="search"
+      >
+        Search beers
+      </label>
+      <input
+        class="header__search"
+        id="search"
+        placeholder="Search..."
+        type="text"
+        value=""
+      />
+    </div>
+  </header>
+</div>
+`;
+
+exports[`should match Header component in mobile format snapshot 1`] = `
+<div>
+  <header
+    class="header"
+  >
+    <img
+      alt="heading background"
+      class="header__hero--mob"
+      src="hero.svg"
+    />
+    <img
+      alt="Brewdog logo"
+      class="header__logo header__logo--mob"
+      src="logo.png"
+      width="190px"
+    />
+    <div
+      class="header__search-container header__search-container--mob"
+    >
+      <label
+        class="search"
+        for="search"
+      >
+        Search beers
+      </label>
+      <input
+        class="header__search"
+        id="search"
+        placeholder="Search..."
+        type="text"
+        value=""
+      />
+    </div>
+  </header>
+</div>
+`;

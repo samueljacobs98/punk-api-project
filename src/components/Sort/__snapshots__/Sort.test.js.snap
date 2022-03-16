@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match Sort component in desktop format snapshot 1`] = `
+<div>
+  <div
+    class="sort-container sort-container--desk"
+  >
+    <label
+      class="sort-container__label"
+      for="sort-method"
+    >
+      Sort
+    </label>
+    <select
+      class="sort-container__select"
+      id="sort-method"
+      name="sort-method"
+    >
+      <option
+        value="none"
+      >
+        Select...
+      </option>
+      <option
+        value="abv-h2l"
+      >
+        ABV (highest to lowest)
+      </option>
+      <option
+        value="abv-l2h"
+      >
+        ABV (lowest to highest)
+      </option>
+      <option
+        value="acid-h2l"
+      >
+        Acidity (highest to lowest)
+      </option>
+      <option
+        value="acid-l2h"
+      >
+        Acidity (lowest to highest)
+      </option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`should match Sort component in mobile format snapshot 1`] = `
+<div>
+  <div
+    class="sort-container sort-container--mob"
+  >
+    <label
+      class="sort-container__label"
+      for="sort-method"
+    >
+      Sort
+    </label>
+    <select
+      class="sort-container__select"
+      id="sort-method"
+      name="sort-method"
+    >
+      <option
+        value="none"
+      >
+        Select...
+      </option>
+      <option
+        value="abv-h2l"
+      >
+        ABV (highest to lowest)
+      </option>
+      <option
+        value="abv-l2h"
+      >
+        ABV (lowest to highest)
+      </option>
+      <option
+        value="acid-h2l"
+      >
+        Acidity (highest to lowest)
+      </option>
+      <option
+        value="acid-l2h"
+      >
+        Acidity (lowest to highest)
+      </option>
+    </select>
+  </div>
+</div>
+`;
